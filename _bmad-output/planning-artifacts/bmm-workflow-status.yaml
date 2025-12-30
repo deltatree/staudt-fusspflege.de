@@ -1,0 +1,76 @@
+# BMM Workflow Status
+generated: 2025-12-30
+project: staudt-fusspflege.de
+project_type: web
+selected_track: bmad-method
+field_type: brownfield
+workflow_path: _bmad/bmm/workflows/workflow-status/paths/method-brownfield.yaml
+workflow_status:
+  - phase: prerequisite
+    name: Documentation
+    workflows:
+      - id: document-project
+        agent: analyst
+        required: true
+        status: completed
+        outputs:
+          - docs/index.md
+  - phase: 0
+    name: Discovery (optional)
+    workflows:
+      - id: brainstorm-project
+        agent: analyst
+        optional: true
+        status: optional
+      - id: research
+        agent: analyst
+        optional: true
+        status: optional
+      - id: product-brief
+        agent: analyst
+        optional: true
+        status: optional
+  - phase: 1
+    name: Planning
+    workflows:
+      - id: prd
+        agent: pm
+        required: true
+        status: completed
+      - id: create-ux-design
+        agent: ux-designer
+        conditional: if_has_ui
+        status: completed
+  - phase: 2
+    name: Solutioning
+    workflows:
+      - id: create-architecture
+        agent: architect
+        recommended: true
+        status: recommended
+      - id: create-epics-and-stories
+        agent: pm
+        required: true
+        status: required
+      - id: test-design
+        agent: tea
+        recommended: true
+        status: recommended
+      - id: validate-architecture
+        agent: architect
+        optional: true
+        status: optional
+      - id: implementation-readiness
+        agent: architect
+        required: true
+        status: required
+  - phase: 3
+    name: Implementation
+    workflows:
+      - id: sprint-planning
+        agent: sm
+        required: true
+        status: required
+next_workflow: prd
+next_workflow: create-architecture
+next_agent: architect
