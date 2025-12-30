@@ -1,0 +1,54 @@
+# generated: 2025-12-30
+# project: staudt-fusspflege.de
+# project_key: pflege
+# tracking_system: file-system
+# story_location: /Users/deltatree/git/staudt-fusspflege.de/_bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# Epic: backlog → in-progress → done
+# Story: backlog → ready-for-dev → in-progress → review → done
+# Retrospective: optional ↔ done
+
+# WORKFLOW NOTES:
+# - Epic moves to in-progress when first story file is created
+# - Preserve higher status if file already existed
+
+generated: 2025-12-30
+project: staudt-fusspflege.de
+project_key: pflege
+tracking_system: file-system
+story_location: /Users/deltatree/git/staudt-fusspflege.de/_bmad-output/implementation-artifacts
+
+development_status:
+  epic-1: backlog
+  1-1-vite-starter-setup: review
+  1-2-sections-und-navigation: review
+  1-3-services-uebersicht: review
+  1-4-hygiene-qualitaet: review
+  1-5-profil-qualifikationen: review
+  1-6-anfahrt-hinweise: review
+  epic-1-retrospective: optional
+
+  epic-2: backlog
+  2-1-kontakt-cta-tel-mail: review
+  2-2-oeffnungszeiten-termin-hinweis: review
+  2-3-adressblock-teilbar: review
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  3-1-responsive-galerie-grid: review
+  3-2-bildvergroesserung-ohne-bruch: review
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  4-1-semantik-skip-link: review
+  4-2-tastaturbedienung-fokus: review
+  4-3-kontrast-lesbarkeit: review
+  4-4-no-js-resilienz: review
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  5-1-datenschutz-seite-aktualisiert: review
+  5-2-content-pflege-ohne-cms: review
+  5-3-statisches-deployment: review
+  epic-5-retrospective: optional
