@@ -1,0 +1,30 @@
+# macOS clutter
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node/JS dependencies
+node_modules/
+
+# Build/output artifacts
+_bmad-output/
+dist/
+build/
+
+# Logs and temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.tmp
+
+# Env/config secrets
+.env
+.env.*
+
+# Thumbnails/cache
+photos/thumbs/
