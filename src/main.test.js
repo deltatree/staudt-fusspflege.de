@@ -366,7 +366,7 @@ describe('setupApp', () => {
     expect(updated?.textContent?.toLowerCase()).toContain('stand');
 
     const contact = doc.querySelector('address');
-    expect(contact?.textContent?.toLowerCase()).toContain('kontakt@staudt-fusspflege.de');
+    expect(contact?.textContent?.toLowerCase()).toContain('praxis@staudt-fusspflege.de');
 
     const scripts = doc.querySelectorAll('script');
     expect(scripts.length).toBe(0);

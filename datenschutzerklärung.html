@@ -3,133 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutzerklaerung · Staudt Fusspflege</title>
+  <title>Datenschutzerklärung · Stefanie Staudt Podologie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      background: #faf9f7;
+      color: #1a1a1a;
       padding: 0;
-      background: #f6f7fb;
-      color: #0f172a;
     }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      transition: background 150ms ease;
+    }
+    .back-link:hover { background: #1d4ed8; }
     main {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 1.75rem;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      box-shadow: 0 14px 45px rgba(15, 23, 42, 0.05);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
     }
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0.25rem;
-      font-size: 1.75rem;
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .last-updated {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     h2 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
       font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    h2::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: #2563eb;
+      border-radius: 2px;
     }
     p {
-      margin: 0 0 0.75rem;
-      color: #334155;
+      color: #4a4a4a;
+      margin-bottom: 0.75rem;
     }
     ul {
-      margin: 0 0 0.75rem 1.25rem;
-      color: #334155;
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      position: relative;
+      color: #4a4a4a;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #059669;
+      font-weight: 700;
     }
     address {
       font-style: normal;
-      color: #334155;
+      color: #4a4a4a;
+      background: #f3f1ed;
+      padding: 1rem;
+      border-radius: 12px;
+      line-height: 1.8;
     }
-    .last-updated {
-      font-weight: 600;
-      color: #0f172a;
-      margin-bottom: 1rem;
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(5,150,105,0.08));
+      border-left: 4px solid #2563eb;
+      padding: 1rem 1.25rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1rem 0;
+    }
+    .highlight-box p { margin: 0; color: #1a1a1a; font-weight: 500; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      main { padding: 1rem; }
+      section { padding: 1.25rem; }
+      header { padding: 2rem 1rem; }
+      header h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Datenschutzerklärung</h1>
+    <span class="last-updated">Stand: Dezember 2025</span>
+  </header>
+
   <main>
-    <h1>Datenschutzerklaerung</h1>
-    <p class="last-updated">Stand: 30.12.2025</p>
+    <a href="/" class="back-link">← Zurück zur Startseite</a>
 
     <section>
       <h2>Verantwortliche Stelle</h2>
       <address>
-        Staudt Fusspflege<br />
-        Beispielstrasse 12<br />
-        64283 Darmstadt<br />
-        Telefon: +49 6151 123456<br />
-        E-Mail: kontakt@staudt-fusspflege.de
+        Stefanie Staudt<br />
+        Heilpraktikerin im Bereich der Podologie<br />
+        Kelterhausstr. 3<br />
+        76698 Ubstadt-Weiher (Zeutern)<br />
+        Telefon: +49 7253 31742<br />
+        E-Mail: praxis@staudt-fusspflege.de
       </address>
+    </section>
+
+    <section>
+      <h2>Grundsatz</h2>
+      <div class="highlight-box">
+        <p>Diese Website verwendet keine Cookies, keine Tracking-Tools und keine Analyse-Dienste. Ihre Privatsphäre wird respektiert.</p>
+      </div>
     </section>
 
     <section>
       <h2>Zwecke der Verarbeitung</h2>
       <ul>
-        <li>Bereitstellung dieser statischen Website.</li>
-        <li>Terminabstimmung und Rueckfragen per Telefon oder E-Mail.</li>
-        <li>Antwort auf Kontaktanfragen.</li>
+        <li>Bereitstellung dieser statischen Website</li>
+        <li>Terminabstimmung und Rückfragen per Telefon oder E-Mail</li>
+        <li>Durchführung podologischer Behandlungen</li>
+        <li>Erfüllung gesetzlicher Dokumentationspflichten im Gesundheitswesen</li>
       </ul>
     </section>
 
     <section>
       <h2>Kategorien von Daten</h2>
       <ul>
-        <li>Kontaktdaten aus E-Mails oder Telefonanfragen.</li>
-        <li>Server-Logdaten (z. B. IP-Adresse, Zeitpunkt, User-Agent) beim Aufruf der Website.</li>
+        <li>Kontaktdaten aus E-Mails oder Telefonanfragen (Name, Telefonnummer, E-Mail)</li>
+        <li>Behandlungsdaten im Rahmen der podologischen Versorgung</li>
+        <li>Server-Logdaten (IP-Adresse, Zeitpunkt, User-Agent) beim Aufruf der Website</li>
       </ul>
     </section>
 
     <section>
       <h2>Rechtsgrundlagen</h2>
       <ul>
-        <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag/Anbahnung) fuer Termin- und Kontaktabwicklung.</li>
-        <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) fuer den sicheren Betrieb der Website.</li>
+        <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Vertragserfüllung für Termin- und Behandlungsabwicklung</li>
+        <li><strong>Art. 6 Abs. 1 lit. c DSGVO</strong> – Erfüllung gesetzlicher Aufbewahrungspflichten</li>
+        <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> – Berechtigtes Interesse am sicheren Betrieb der Website</li>
+        <li><strong>Art. 9 Abs. 2 lit. h DSGVO</strong> – Verarbeitung von Gesundheitsdaten zur Gesundheitsversorgung</li>
       </ul>
     </section>
 
     <section>
-      <h2>Hosting und Logfiles</h2>
-      <p>Der Hosting-Provider speichert Server-Logfiles (IP-Adresse, Datum/Uhrzeit, aufgerufene URL, User-Agent) zur Sicherstellung des Betriebs und zur Stoerungsanalyse. Eine Zusammenfuehrung mit anderen Daten findet nicht statt.</p>
-      <p>Logdaten werden in der Regel nach 7–30 Tagen automatisch geloescht.</p>
+      <h2>Hosting</h2>
+      <p>Diese Website wird bei Netlify (Netlify, Inc., USA) gehostet. Der Hoster speichert Server-Logfiles (IP-Adresse, Datum/Uhrzeit, aufgerufene URL) zur Sicherstellung des Betriebs. Netlify ist unter dem EU-US Data Privacy Framework zertifiziert.</p>
+      <p>Logdaten werden in der Regel nach 30 Tagen automatisch gelöscht.</p>
     </section>
 
     <section>
       <h2>Speicherdauer</h2>
-      <p>Kontaktdaten aus E-Mails oder Anrufen werden nur solange gespeichert, wie es fuer die Bearbeitung Ihrer Anfrage oder gesetzliche Aufbewahrungspflichten erforderlich ist.</p>
-    </section>
-
-    <section>
-      <h2>Weitergabe von Daten</h2>
-      <p>Es erfolgt keine Weitergabe an Dritte, ausser wenn gesetzlich vorgeschrieben oder zur Vertragsabwicklung erforderlich (z. B. Steuerberater). Es werden keine Tracking- oder Marketing-Dienste eingesetzt.</p>
-    </section>
-
-    <section>
-      <h2>Cookies und Tracking</h2>
-      <p>Es werden keine Cookies gesetzt und keine Analyse- oder Tracking-Dienste verwendet.</p>
-    </section>
-
-    <section>
-      <h2>Ihre Rechte</h2>
       <ul>
-        <li>Auskunft ueb. gespeicherte Daten (Art. 15 DSGVO)</li>
-        <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-        <li>Loeschung (Art. 17 DSGVO), soweit keine Aufbewahrungspflichten bestehen</li>
-        <li>Einschraenkung der Verarbeitung (Art. 18 DSGVO)</li>
-        <li>Widerspruch gegen Verarbeitung auf Grundlage berechtigter Interessen (Art. 21 DSGVO)</li>
-        <li>Datenuebertragbarkeit (Art. 20 DSGVO), soweit anwendbar</li>
-        <li>Beschwerderecht bei einer Aufsichtsbehoerde</li>
+        <li><strong>Kontaktanfragen:</strong> Bis zur Erledigung, maximal 6 Monate</li>
+        <li><strong>Behandlungsdokumentation:</strong> 10 Jahre (gesetzliche Aufbewahrungspflicht)</li>
+        <li><strong>Abrechnungsdaten:</strong> 10 Jahre nach Steuerrecht</li>
+        <li><strong>Server-Logs:</strong> Maximal 30 Tage</li>
       </ul>
     </section>
 
     <section>
-      <h2>Kontakt fuer Datenschutzanfragen</h2>
-      <p>Schreiben Sie per E-Mail an kontakt@staudt-fusspflege.de oder per Post an die oben genannte Anschrift. Ein Widerruf erteilter Einwilligungen ist jederzeit mit Wirkung fuer die Zukunft moeglich.</p>
+      <h2>Weitergabe von Daten</h2>
+      <p>Eine Weitergabe an Dritte erfolgt nur, wenn:</p>
+      <ul>
+        <li>Sie ausdrücklich eingewilligt haben</li>
+        <li>Dies gesetzlich vorgeschrieben ist (z.B. Krankenkassen bei Heilmittelverordnung)</li>
+        <li>Dies zur Vertragsabwicklung erforderlich ist (z.B. Steuerberater)</li>
+      </ul>
+      <p>Es werden keine Marketing- oder Tracking-Dienste eingesetzt.</p>
+    </section>
+
+    <section>
+      <h2>Ihre Rechte nach DSGVO</h2>
+      <ul>
+        <li><strong>Auskunft</strong> über gespeicherte Daten (Art. 15 DSGVO)</li>
+        <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</li>
+        <li><strong>Löschung</strong>, soweit keine Aufbewahrungspflichten bestehen (Art. 17 DSGVO)</li>
+        <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18 DSGVO)</li>
+        <li><strong>Datenübertragbarkeit</strong> in maschinenlesbarem Format (Art. 20 DSGVO)</li>
+        <li><strong>Widerspruch</strong> gegen Verarbeitung auf Grundlage berechtigter Interessen (Art. 21 DSGVO)</li>
+        <li><strong>Beschwerde</strong> bei einer Aufsichtsbehörde (z.B. LfDI Baden-Württemberg)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontakt für Datenschutzanfragen</h2>
+      <p>Für Auskünfte, Berichtigungen oder Löschungen wenden Sie sich bitte an:</p>
+      <address>
+        Stefanie Staudt<br />
+        E-Mail: praxis@staudt-fusspflege.de<br />
+        Telefon: +49 7253 31742
+      </address>
+      <p style="margin-top: 1rem;">Ein Widerruf erteilter Einwilligungen ist jederzeit mit Wirkung für die Zukunft möglich.</p>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Stefanie Staudt · Podologiepraxis · Alle Rechte vorbehalten</p>
+  </footer>
 </body>
 </html>

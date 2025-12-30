@@ -155,9 +155,38 @@ export function setupApp(container) {
       </section>
 
       <section id="datenschutz" class="section">
-        <h2>Datenschutz</h2>
-        <p>Ihre Daten werden ausschliesslich zur Terminabstimmung genutzt. Keine Weitergabe an Dritte oder Tracking-Tools.</p>
-        <p><a class="link" href="/datenschutzerklärung.html" target="_blank" rel="noopener noreferrer">Zur Datenschutzerklärung</a></p>
+        <h2>Datenschutz & Ihre Rechte</h2>
+        <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten Ihre Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen (DSGVO, BDSG).</p>
+        
+        <div class="privacy-summary">
+          <h3>Auf einen Blick</h3>
+          <ul class="privacy-list">
+            <li><strong>Keine Cookies:</strong> Diese Website verwendet keine Tracking-Cookies oder Analyse-Tools.</li>
+            <li><strong>Keine Weitergabe:</strong> Ihre Kontaktdaten werden nicht an Dritte weitergegeben.</li>
+            <li><strong>Zweckbindung:</strong> Daten werden nur für Terminvereinbarung und Behandlung genutzt.</li>
+            <li><strong>Löschung:</strong> Nach Abschluss der Behandlung und Ablauf gesetzlicher Fristen werden Daten gelöscht.</li>
+          </ul>
+        </div>
+
+        <div class="privacy-rights">
+          <h3>Ihre Rechte</h3>
+          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie ein Widerspruchsrecht und das Recht auf Datenübertragbarkeit.</p>
+        </div>
+
+        <div class="privacy-contact">
+          <h3>Verantwortliche Stelle</h3>
+          <address>
+            Stefanie Staudt<br />
+            Kelterhausstr. 3<br />
+            76698 Ubstadt-Weiher (Zeutern)<br />
+            Telefon: +49 7253 31742<br />
+            E-Mail: praxis@staudt-fusspflege.de
+          </address>
+        </div>
+
+        <div class="privacy-cta">
+          <a class="button" href="/datenschutzerklärung.html" target="_blank" rel="noopener noreferrer">Vollständige Datenschutzerklärung lesen</a>
+        </div>
       </section>
 
       <section id="anfahrt" class="section">
@@ -185,16 +214,16 @@ export function setupApp(container) {
       <section id="galerie" class="section">
         <h2>Galerie</h2>
         <div class="gallery-grid" data-gallery-grid data-responsive="true">
-          <a href="/photos/thumbs/img002.jpg" data-lightbox-trigger>
+          <a href="/photos/img002.jpg" data-lightbox-trigger>
             <img src="/photos/thumbs/img002.jpg" alt="Behandlungsraum" loading="lazy" width="320" height="240" />
           </a>
-          <a href="/photos/thumbs/img005.jpg" data-lightbox-trigger>
+          <a href="/photos/img005.jpg" data-lightbox-trigger>
             <img src="/photos/thumbs/img005.jpg" alt="Werkzeug sauber vorbereitet" loading="lazy" width="320" height="240" />
           </a>
-          <a href="/photos/thumbs/img006.jpg" data-lightbox-trigger>
+          <a href="/photos/img006.jpg" data-lightbox-trigger>
             <img src="/photos/thumbs/img006.jpg" alt="Pflegeequipment" loading="lazy" width="320" height="240" />
           </a>
-          <a href="/photos/thumbs/img008.jpg" data-lightbox-trigger>
+          <a href="/photos/img008.jpg" data-lightbox-trigger>
             <img src="/photos/thumbs/img008.jpg" alt="Praxisdetails" loading="lazy" width="320" height="240" />
           </a>
         </div>
