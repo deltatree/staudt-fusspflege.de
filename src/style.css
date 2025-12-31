@@ -567,6 +567,16 @@ section.hero::before {
   border-bottom: none;
 }
 
+.contact-line a {
+  color: var(--color-warm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-line a:hover {
+  color: #fff;
+}
+
 .contact-block .link {
   margin-top: var(--space-md);
   display: inline-block;
@@ -672,6 +682,16 @@ section.hero::before {
   font-style: normal;
   color: var(--color-muted);
   line-height: 1.8;
+}
+
+.privacy-contact address a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy-contact address a:hover {
+  color: var(--color-warm);
 }
 
 .privacy-cta {
