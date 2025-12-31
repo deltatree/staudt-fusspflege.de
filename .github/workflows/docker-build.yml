@@ -87,4 +87,4 @@ jobs:
         run: |
           curl -X POST https://dashboard.dtcloud.de/v1/webhooks/native \
           -H "Content-Type: application/json" \
-          -d '{"name": "ghcr.io/${{ github.repository }}", "tag": "latest'
+          -d '{"name": "ghcr.io/${{ github.repository }}", "tag": "latest"}'
