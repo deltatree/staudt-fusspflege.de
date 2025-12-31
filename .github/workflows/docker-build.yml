@@ -74,3 +74,17 @@ jobs:
           subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
+
+  release:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Webhook
+        run: |
+          curl -X POST https://dashboard.dtcloud.de/v1/webhooks/native \
+          -H "Content-Type: application/json" \
+          -d '{"name": "ghcr.io/${{ github.repository }}", "tag": "latest'
