@@ -21,11 +21,8 @@ FROM nginx:alpine
 # Copy custom nginx config for SPA
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built static files
+# Copy built static files (includes photos from public/)
 COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Copy photos directory (not processed by Vite)
-COPY photos /usr/share/nginx/html/photos
 
 # Expose port 80
 EXPOSE 80

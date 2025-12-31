@@ -180,7 +180,7 @@ export function setupApp(container) {
             Kelterhausstr. 3<br />
             76698 Ubstadt-Weiher (Zeutern)<br />
             Telefon: +49 7253 31742<br />
-            E-Mail: praxis@staudt-fusspflege.de
+            E-Mail: <a href="mailto:praxis@staudt-fusspflege.de">praxis@staudt-fusspflege.de</a>
           </address>
         </div>
 
@@ -204,7 +204,7 @@ export function setupApp(container) {
             Telefon: +49 7253 31742
           </div>
           <div class="contact-line" data-contact-mail>
-            E-Mail: praxis@staudt-fusspflege.de
+            E-Mail: <a href="mailto:praxis@staudt-fusspflege.de">praxis@staudt-fusspflege.de</a>
           </div>
           <div class="contact-line">Ebenerdiger Zugang, Besucherparkplaetze vorhanden.</div>
           <a class="link" href="https://maps.google.com/?q=Kelterhausstr.+3+76698+Ubstadt-Weiher+Zeutern" target="_blank" rel="noopener noreferrer">Route oeffnen</a>
