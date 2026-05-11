@@ -41,7 +41,7 @@ export function setupApp(container) {
 
         <article class="profile-card">
           <div class="profile-media">
-            <img src="/photos/thumbs/img002.jpg" alt="Portrait Profil Staudt Fusspflege" loading="lazy" />
+            <img src="/photos/thumbs/img002.jpg" alt="Stefanie Staudt – Heilpraktikerin Podologie und Wundexpertin ICW" width="120" height="160" fetchpriority="high" decoding="async" />
           </div>
           <div class="profile-copy">
             <p class="profile-name" data-profile-name>Stefanie Staudt</p>

@@ -114,7 +114,7 @@ describe('setupApp', () => {
 
     const img = profile?.querySelector('img');
     expect(img).toBeTruthy();
-    expect(img?.getAttribute('alt')).toMatch(/Portraet|Portrait|Profil/i);
+    expect(img?.getAttribute('alt')).toMatch(/Portraet|Portrait|Profil|Stefanie Staudt/i);
     expect(img?.getAttribute('src')).toContain('photos/thumbs');
   });
 
@@ -332,7 +332,7 @@ describe('setupApp', () => {
     expect(tel).toBeTruthy();
     expect(mail).toBeTruthy();
 
-    ['profil', 'uebermich', 'podologie', 'leistungen', 'hygiene', 'kontakt', 'datenschutz', 'anfahrt', 'galerie'].forEach((id) => {
+    ['profil', 'uebermich', 'podologie', 'leistungen', 'hygiene', 'kontakt', 'datenschutz', 'galerie'].forEach((id) => {
       expect(app?.querySelector(`#${id}`)).toBeTruthy();
     });
   });

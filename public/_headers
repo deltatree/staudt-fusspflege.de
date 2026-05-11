@@ -1,10 +1,10 @@
 /*
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
 
 # HTML files - never cache (new deployments served immediately)
 /*.html
@@ -16,3 +16,7 @@
 # Hashed assets - cache forever (Vite adds content hash)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Photos served fresh-ish (no hash in filename, but rarely change)
+/photos/*
+  Cache-Control: public, max-age=604800
