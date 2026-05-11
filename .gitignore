@@ -27,3 +27,6 @@ yarn-error.log*
 
 # Thumbnails/cache
 photos/thumbs/
+
+# Local AI tooling state (never commit; contains large binaries/SQLite logs)
+.codex/
