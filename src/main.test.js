@@ -368,8 +368,9 @@ describe('setupApp', () => {
     const contact = doc.querySelector('address');
     expect(contact?.textContent?.toLowerCase()).toContain('praxis@staudt-fusspflege.de');
 
-    const scripts = doc.querySelectorAll('script');
-    expect(scripts.length).toBe(0);
+    const scripts = Array.from(doc.querySelectorAll('script'));
+    expect(scripts.every((s) => !s.getAttribute('src') && !s.getAttribute('type'))).toBe(true);
+    expect(scripts.every((s) => /localStorage|matchMedia|data-theme/.test(s.textContent || ''))).toBe(true);
   });
 
   it('documents where to edit site content without CMS', () => {

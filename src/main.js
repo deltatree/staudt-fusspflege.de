@@ -1,31 +1,27 @@
 import './style.css';
 
 export function setupApp(container) {
-  document.documentElement.style.setProperty('--color-bg', '#f8fafc');
-  document.documentElement.style.setProperty('--color-surface', '#ffffff');
-  document.documentElement.style.setProperty('--color-text', '#0b1220');
-  document.documentElement.style.setProperty('--color-muted', '#334155');
-  document.documentElement.style.setProperty('--color-border', '#d7deea');
-  document.documentElement.style.setProperty('--color-accent', '#0ea5e9');
-  document.documentElement.style.setProperty('--color-accent-strong', '#2563eb');
-
   container.innerHTML = `
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
       <header>
         <nav class="site-nav" aria-label="Hauptnavigation">
-        <div class="nav-brand">Staudt Fusspflege</div>
-        <div class="nav-links" role="list">
-          <a role="listitem" href="#profil">Profil</a>
-          <a role="listitem" href="#uebermich">Historie</a>
-          <a role="listitem" href="#podologie">Podologie</a>
-          <a role="listitem" href="#leistungen">Leistungen</a>
-          <a role="listitem" href="#hygiene">Hygiene</a>
-          <a role="listitem" href="#kontakt">Kontakt</a>
-          <a role="listitem" href="#datenschutz">Datenschutz</a>
-        </div>
-      </nav>
-    </header>
+          <div class="nav-brand">Staudt Fusspflege</div>
+          <div class="nav-links" role="list">
+            <a role="listitem" href="#profil">Profil</a>
+            <a role="listitem" href="#uebermich">Historie</a>
+            <a role="listitem" href="#podologie">Podologie</a>
+            <a role="listitem" href="#leistungen">Leistungen</a>
+            <a role="listitem" href="#hygiene">Hygiene</a>
+            <a role="listitem" href="#kontakt">Kontakt</a>
+            <a role="listitem" href="#datenschutz">Datenschutz</a>
+          </div>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Farbschema umschalten" title="Farbschema umschalten">
+            <svg class="theme-icon theme-icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+            <svg class="theme-icon theme-icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </nav>
+      </header>
 
     <main id="main-content" class="layout">
       <section id="profil" class="hero section">
@@ -271,6 +267,41 @@ export function setupApp(container) {
   container.appendChild(focusStyles);
 
   setupLightbox(container);
+  setupThemeToggle(container);
+}
+
+function setupThemeToggle(container) {
+  const button = container.querySelector('[data-theme-toggle]');
+  if (!button) return;
+
+  const root = document.documentElement;
+  const mq = typeof window.matchMedia === 'function'
+    ? window.matchMedia('(prefers-color-scheme: dark)')
+    : null;
+
+  const apply = (theme, persist) => {
+    root.setAttribute('data-theme', theme);
+    button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    if (persist) {
+      try { localStorage.setItem('theme', theme); } catch (e) {}
+    }
+  };
+
+  let stored = null;
+  try { stored = localStorage.getItem('theme'); } catch (e) {}
+  const prefersDark = mq ? mq.matches : false;
+  apply(stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light'), false);
+
+  button.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    apply(next, true);
+  });
+
+  mq?.addEventListener?.('change', (e) => {
+    let s = null;
+    try { s = localStorage.getItem('theme'); } catch (err) {}
+    if (s !== 'dark' && s !== 'light') apply(e.matches ? 'dark' : 'light', false);
+  });
 }
 
 const app = document.querySelector('#app');

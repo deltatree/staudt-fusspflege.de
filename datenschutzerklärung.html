@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutzerklärung · Stefanie Staudt Podologie</title>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/InterVariable.woff2" crossorigin>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <style>
     @font-face {
       font-family: 'Inter';
@@ -13,20 +23,53 @@
       font-display: swap;
       src: url('/fonts/InterVariable.woff2') format('woff2');
     }
+    :root {
+      color-scheme: light;
+      --bg: #faf9f7;
+      --bg-alt: #f3f1ed;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #4a4a4a;
+      --muted-2: #6b7280;
+      --border: rgba(0, 0, 0, 0.06);
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --success: #059669;
+      --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --hero-on: #ffffff;
+      --section-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0b1117;
+      --bg-alt: #141b24;
+      --surface: #1a2230;
+      --text: #e6edf3;
+      --muted: #c1cad6;
+      --muted-2: #9aa6b4;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #7aaeff;
+      --accent-hover: #a5c8ff;
+      --success: #34d399;
+      --hero-gradient: linear-gradient(135deg, #1e2a52 0%, #3a2a5a 100%);
+      --hero-on: #f5f7ff;
+      --section-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       line-height: 1.7;
-      background: #faf9f7;
-      color: #1a1a1a;
+      background: var(--bg);
+      color: var(--text);
       padding: 0;
+      transition: background-color 350ms ease, color 350ms ease;
     }
     .back-link {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       padding: 0.75rem 1.5rem;
-      background: #2563eb;
+      background: var(--accent);
       color: #fff;
       text-decoration: none;
       font-weight: 600;
@@ -34,15 +77,16 @@
       margin-bottom: 1.5rem;
       transition: background 150ms ease;
     }
-    .back-link:hover { background: #1d4ed8; }
+    :root[data-theme="dark"] .back-link { color: #0b1117; }
+    .back-link:hover { background: var(--accent-hover); }
     main {
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem 1.5rem 4rem;
     }
     header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #fff;
+      background: var(--hero-gradient);
+      color: var(--hero-on);
       padding: 3rem 1.5rem 2rem;
       text-align: center;
     }
@@ -53,24 +97,24 @@
     }
     .last-updated {
       display: inline-block;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.2);
       padding: 0.25rem 0.75rem;
       border-radius: 9999px;
       font-size: 0.85rem;
       font-weight: 500;
     }
     section {
-      background: #fff;
+      background: var(--surface);
       border-radius: 16px;
       padding: 1.5rem 2rem;
       margin-bottom: 1rem;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      border: 1px solid var(--border);
+      box-shadow: var(--section-shadow);
     }
     h2 {
       font-size: 1.15rem;
       font-weight: 700;
-      color: #1a1a1a;
+      color: var(--text);
       margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
@@ -80,13 +124,15 @@
       content: '';
       width: 4px;
       height: 20px;
-      background: #2563eb;
+      background: var(--accent);
       border-radius: 2px;
     }
     p {
-      color: #4a4a4a;
+      color: var(--muted);
       margin-bottom: 0.75rem;
     }
+    a { color: var(--accent); }
+    a:hover { color: var(--accent-hover); }
     ul {
       list-style: none;
       padding: 0;
@@ -94,37 +140,37 @@
     ul li {
       padding: 0.5rem 0 0.5rem 1.5rem;
       position: relative;
-      color: #4a4a4a;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
     }
     ul li:last-child { border-bottom: none; }
     ul li::before {
       content: '✓';
       position: absolute;
       left: 0;
-      color: #059669;
+      color: var(--success);
       font-weight: 700;
     }
     address {
       font-style: normal;
-      color: #4a4a4a;
-      background: #f3f1ed;
+      color: var(--muted);
+      background: var(--bg-alt);
       padding: 1rem;
       border-radius: 12px;
       line-height: 1.8;
     }
     .highlight-box {
-      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(5,150,105,0.08));
-      border-left: 4px solid #2563eb;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(5, 150, 105, 0.08));
+      border-left: 4px solid var(--accent);
       padding: 1rem 1.25rem;
       border-radius: 0 12px 12px 0;
       margin: 1rem 0;
     }
-    .highlight-box p { margin: 0; color: #1a1a1a; font-weight: 500; }
+    .highlight-box p { margin: 0; color: var(--text); font-weight: 500; }
     footer {
       text-align: center;
       padding: 2rem;
-      color: #6b7280;
+      color: var(--muted-2);
       font-size: 0.9rem;
     }
     @media (max-width: 600px) {
@@ -132,6 +178,9 @@
       section { padding: 1.25rem; }
       header { padding: 2rem 1rem; }
       header h1 { font-size: 1.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
