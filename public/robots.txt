@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://staudt-fusspflege.de/sitemap.xml

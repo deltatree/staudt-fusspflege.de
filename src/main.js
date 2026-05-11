@@ -41,7 +41,10 @@ export function setupApp(container) {
 
         <article class="profile-card">
           <div class="profile-media">
-            <img src="/photos/thumbs/img002.jpg" alt="Stefanie Staudt – Heilpraktikerin Podologie und Wundexpertin ICW" width="120" height="160" fetchpriority="high" decoding="async" />
+            <picture>
+              <source srcset="/photos/thumbs/img002.webp" type="image/webp" />
+              <img src="/photos/thumbs/img002.jpg" alt="Stefanie Staudt – Heilpraktikerin Podologie und Wundexpertin ICW" width="120" height="160" fetchpriority="high" decoding="async" />
+            </picture>
           </div>
           <div class="profile-copy">
             <p class="profile-name" data-profile-name>Stefanie Staudt</p>
@@ -214,17 +217,29 @@ export function setupApp(container) {
       <section id="galerie" class="section">
         <h2>Galerie</h2>
         <div class="gallery-grid" data-gallery-grid data-responsive="true">
-          <a href="/photos/img002.jpg" data-lightbox-trigger>
-            <img src="/photos/thumbs/img002.jpg" alt="Behandlungsraum" loading="lazy" width="320" height="240" />
+          <a href="/photos/img002.webp" data-lightbox-trigger>
+            <picture>
+              <source srcset="/photos/thumbs/img002.webp" type="image/webp" />
+              <img src="/photos/thumbs/img002.jpg" alt="Behandlungsraum" loading="lazy" decoding="async" width="320" height="240" />
+            </picture>
           </a>
-          <a href="/photos/img005.jpg" data-lightbox-trigger>
-            <img src="/photos/thumbs/img005.jpg" alt="Werkzeug sauber vorbereitet" loading="lazy" width="320" height="240" />
+          <a href="/photos/img005.webp" data-lightbox-trigger>
+            <picture>
+              <source srcset="/photos/thumbs/img005.webp" type="image/webp" />
+              <img src="/photos/thumbs/img005.jpg" alt="Werkzeug sauber vorbereitet" loading="lazy" decoding="async" width="320" height="240" />
+            </picture>
           </a>
-          <a href="/photos/img006.jpg" data-lightbox-trigger>
-            <img src="/photos/thumbs/img006.jpg" alt="Pflegeequipment" loading="lazy" width="320" height="240" />
+          <a href="/photos/img006.webp" data-lightbox-trigger>
+            <picture>
+              <source srcset="/photos/thumbs/img006.webp" type="image/webp" />
+              <img src="/photos/thumbs/img006.jpg" alt="Pflegeequipment" loading="lazy" decoding="async" width="320" height="240" />
+            </picture>
           </a>
-          <a href="/photos/img008.jpg" data-lightbox-trigger>
-            <img src="/photos/thumbs/img008.jpg" alt="Praxisdetails" loading="lazy" width="320" height="240" />
+          <a href="/photos/img008.webp" data-lightbox-trigger>
+            <picture>
+              <source srcset="/photos/thumbs/img008.webp" type="image/webp" />
+              <img src="/photos/thumbs/img008.jpg" alt="Praxisdetails" loading="lazy" decoding="async" width="320" height="240" />
+            </picture>
           </a>
         </div>
       </section>
